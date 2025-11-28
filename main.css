@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#map {
+    height: 100vh;
+    width: 100%;
+}
+
+.top-bar {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255,255,255,0.92);
+	backdrop-filter: blur(3px);
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+    z-index: 999;
+    display: flex;
+    flex-direction: column; /* stack title on top */
+    gap: 10px;
+    align-items: center;
+}
+.map-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+.controls {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+#searchBox {
+    padding: 6px 10px;
+    width: 220px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+	background: #fafafa;
+}
+
+.filters label {
+    margin-right: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.marker-icon {
+    filter: drop-shadow(0 0 2px black);
+}
+
+
+.legend {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.92); /*OSM white*/
+    padding: 10px;
+    border-radius: 8px;
+	border: 1px solid #d3d3d3; /* OSM-style border */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+    z-index: 999;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.legend-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+.info-panel {
+    position: absolute;
+    top: 15%;
+    right: 10px;
+    width: 500px;
+    max-height: 80%;
+    overflow-y: auto;
+    background: rgba(255,255,255,0.92);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    z-index: 1500;
+    display: none; /* hidden by default */
+}
+
+.info-panel img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;     /* or: contain; */
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+#close-panel {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    float: right;
+}
+
+.direction-btn, .start-journey-btn {
+    background-color: #005eff;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 6px;
+    margin-top: 4px;
+}
+.direction-btn:hover, .start-journey-btn:hover {
+    background-color: #003bb5;
+}
+
+#live-info {
+    position: fixed;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    z-index: 9999;
+    display: none; /* Hidden until journey starts */
+    backdrop-filter: blur(6px);
+}
+
+
+/* Mobile adjustments */
+@media screen and (max-width: 600px) {
+    .direction-btn, .start-journey-btn {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+    #panel-content img {
+        max-width: 100%;
+    }
+}
