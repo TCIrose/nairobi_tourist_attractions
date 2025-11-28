@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nairobi Tourist Attractions</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+    <div class="top-bar">
+		<div class="map-title">A Guide to Some of Nairobi’s Attractions and Experiences</div>
+		<div class="controls">
+			<input id="searchBox" type="text" placeholder="Search for a site..." />
+
+			<div class="filters">
+			<label><input type="checkbox" class="filter-checkbox" data-category="Wildlife & Nature" checked> Wildlife & Nature</label>
+			<label><input type="checkbox" class="filter-checkbox" data-category="History & Culture" checked> History & Culture</label>
+			<label><input type="checkbox" class="filter-checkbox" data-category="Shopping & Crafts" checked> Shopping & Crafts</label>
+			<label><input type="checkbox" class="filter-checkbox" data-category="Dining & Leisure" checked> Dining & Leisure</label>
+			<label><input type="checkbox" class="filter-checkbox" data-category="Entertainment & Malls" checked> Entertainment & Malls</label>
+			</div>
+		</div>
+
+    </div>
+
+    <div id="map"></div>
+	<div id="info-panel" class="info-panel">
+		<button id="close-panel">✖</button>
+		<div id="panel-content"></div>
+	</div>
+
+
+    <div id="legend" class="legend"></div>
+	
+	<div id="live-info"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="main.js"></script>
+	
+	<link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css">
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+
+</body>
+</html>
