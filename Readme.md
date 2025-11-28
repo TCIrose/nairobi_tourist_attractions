@@ -103,13 +103,21 @@ Bottom-center distance/time display.
 100% mobile-friendly layout.
 
 📁 Project Structure
+
 /project-folder
+
 │── index.html        # Main HTML structure
+
 │── main.css         # Styling for map, sidebar, legend, buttons
+
 │── main.js           # All map logic, routing, UI handlers
+
 │── sites.json        # Tourist attraction dataset
+
 │── /images           # Marker icons + attraction images
+
 │── README.md         # Documentation
+
 
 🚀 Running Locally
 
